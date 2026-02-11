@@ -100,4 +100,20 @@ const maleCharacters = characters.filter((character)=>{
 const femaleCharacters = characters.filter((character)=>{
     return character.gender === 'female';
 });
-console.log(femaleCharacters);
+//console.log(femaleCharacters);
+
+/*-----------------------------------------------------------------------------------
+EVERY
+1.Does every character have blue eyes?
+2.Does every character have mass more than 40?
+3.Is every character shorter than 200?
+4.Is every character male?
+--------------------------------------------------------------------------------------*/
+
+//1.Does every character have blue eyes?
+const allBlueEyes = characters.every((character)=>character.eye_color =='blue');
+//console.log(allBlueEyes);
+
+//2.Does every character have mass more than 40?
+const allMass = characters.every((character)=>character.mass >40);
+//console.log(allMass);
