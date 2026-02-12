@@ -126,6 +126,33 @@ const allShorterThan200 = characters.every((character)=>character.height < 200);
 const allMale = characters.every((character)=>character.gender == 'male');
 //console.log(allMale);
 
+/*-----------------------------------------------------------------------------------
+SOME
+1.Is there at least one male character?
+2.Is there at least one character with blue eyes?
+3.Is there at least one character taller than 200?
+4.Is there at least one character that has mass less than 50?
+--------------------------------------------------------------------------------------*/
+
+//1.Is there at least one male character?
+const atLeastOneMale = characters.some((character)=>character.gender == 'male');
+//console.log(atLeastOneMale);
+
+//2.Is there at least one character with blue eyes?
+const atLeastOneBlueEyes = characters.some((character)=>character.eye_color == 'blue');
+//console.log(atLeastOneBlueEyes);
+
+//3.Is there at least one character taller than 200?
+const atLeastOneCharacterTaller = characters.some((character)=>character.height > 200);
+//console.log(atLeastOneCharacterTaller);
+
+//4.Is there at least one character that has mass less than 50?
+const atLeastOneCharacterLessMass = characters.some((character)=>character.mass < 50);
+//console.log(atLeastOneCharacterLessMass);
+
+
+
+
 
 
 
