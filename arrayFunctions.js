@@ -150,6 +150,48 @@ const atLeastOneCharacterTaller = characters.some((character)=>character.height 
 const atLeastOneCharacterLessMass = characters.some((character)=>character.mass < 50);
 //console.log(atLeastOneCharacterLessMass);
 
+/*-----------------------------------------------------------------------------------
+SORT
+1.Sort by name
+2.Sort by mass
+3.Sort by height
+4.Sort by gender
+--------------------------------------------------------------------------------------*/
+//1.Sort by name
+const sortByName = characters.sort((a,b)=>{{
+    if(a.name < b.name){return -1;}
+    if(a.name > b.name){return 1;}
+    return 0;
+}});
+//console.log(sortByName);
+
+//2.Sort by mass
+const sortByMass = characters.sort((a,b)=>{return a.mass-b.mass});
+//console.log(sortByMass);
+
+//3.Sort by height
+const sortByHeight = characters.sort((a,b)=>{return a.height-b.height});
+//console.log(sortByHeight);
+
+//4.Sort by gender
+const sortByGender = characters.sort((a,b)=>{
+    if(a.gender>b.gender){return 1}
+    if(a.gender<b.gender){return -1}
+    return 0;
+});
+
+//console.log(sortByGender);
+
+/*-----------------------------------------------------------------------------------
+REDUCE
+1.Get the total mass of all characters
+2.Get the total height of all characters
+3.Get the total number of characters in all the character names
+4.Get the total number of characters by eye color (hint. a map of eye color to count)
+--------------------------------------------------------------------------------------*/
+
+
+
 
 
 
