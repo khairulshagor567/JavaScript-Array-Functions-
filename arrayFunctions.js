@@ -190,6 +190,36 @@ REDUCE
 4.Get the total number of characters by eye color (hint. a map of eye color to count)
 --------------------------------------------------------------------------------------*/
 
+//1.Get the total mass of all characters
+const totalMass = characters.reduce((acc,value)=>{
+    return acc += Number(value.mass);
+},0);
+//console.log(totalMass);
+
+//2.Get the total height of all characters
+const totalHeight = characters.reduce((acc,value)=>{
+    return acc += Number(value.height);
+},0);
+//console.log(totalHeight);
+
+//3.Get the total number of characters in all the character names
+const totalCharactersInNames = characters.reduce((acc,value)=>{
+    return acc += value.name.length;
+},0);   
+//console.log(totalCharactersInNames);
+
+//4.Get the total number of characters by eye color (hint. a map of eye color to count)
+
+const totalColorCount = characters.reduce((acc,value)=>{
+    if(acc[value.eye_color]){
+        acc[value.eye_color]++;
+    } else {
+        acc[value.eye_color] = 1;
+    }
+    return acc;
+},{});
+
+console.log(totalColorCount);
 
 
 
